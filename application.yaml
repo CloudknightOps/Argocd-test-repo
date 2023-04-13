@@ -6,8 +6,8 @@ metadata:
 spec:
   project: default
 
-  source: https://github.com/CloudknightOps/Argocd-test-repo.git
-    repoURL: 
+  source: 
+    repoURL: https://github.com/CloudknightOps/Argocd-test-repo.gi
     targetRevision: HEAD
     path: deploy
   destination: 
@@ -19,5 +19,5 @@ spec:
     - CreateNamespace=true
 
     automated:
-      selfHeal: true
+      selfHeal: true 
       prune: true
