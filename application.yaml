@@ -6,8 +6,8 @@ metadata:
 spec:
   project: default
 
-  source: https://github.com/CloudknightOps/Argocd-test-repo.git
-    repoURL: 
+  source: 
+    repoURL: https://github.com/CloudknightOps/Argocd-test-repo.git
     targetRevision: HEAD
     path: deploy
   destination: 
