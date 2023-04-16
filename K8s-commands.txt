@@ -1,0 +1,39 @@
+# Commands for Kubectl config file 
+ View Config File @ ~/.kube/config 
+
+## Cluster Creaion using EKS 
+eksctl create cluster --name eksargocd --node-type t2.large --nodes 1 \
+--nodes-min 1 --nodes-max 2 --region us-east-1 --zones=us-east-1a,us-east-1b,us-east-1c
+### You can always remove the unwanted values 
+
+## Prints all your running cluster
+eksctl get clusters
+
+### Gets specific information about your EKS cluster.
+eksctl get cluster --name <name> --region us-east-1
+
+## Update the kubectk config file with info of a new cluster 
+aws eks update-kubeconfig --name <name> 
+
+## Config file management 
+
+### Get info about your current cluster
+kubectl config current-context
+
+###Switching between clusters
+kubectl config use-context <context-name>
+
+#namespaces
+
+### Prints ll your namespaces
+kubectl get namespaces
+
+## Create namespace
+kubectl create namespaces <name>
+
+### Switching current namespace 
+kubectl config set-context --current --namespace=<new-namespace>
+
+### View current namespace
+kubectl config view --minify --output 'jsonpath={..namespace}'
+
