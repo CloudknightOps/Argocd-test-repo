@@ -25,7 +25,7 @@ kubectl config use-context <context-name>
 
 #namespaces
 
-### Prints ll your namespaces
+### Prints all your namespaces
 kubectl get namespaces
 
 ## Create namespace
